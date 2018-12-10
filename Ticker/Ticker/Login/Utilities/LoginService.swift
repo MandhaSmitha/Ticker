@@ -17,6 +17,9 @@ enum UserKeys: String {
 }
 
 class LoginService: NSObject {
+    lazy var managedObjectContext = {
+        return CoreDataUtility.shared.managedObjectContext
+    }()
     
     func signup(signupInput: SignupInputModel, completionHandler: @escaping ((Bool, String?) -> Void)) {
         if isValidUserInput(signupInput) {
@@ -55,7 +58,6 @@ class LoginService: NSObject {
     }
     
     func getUserList(email: String) -> [Users]? {
-        let managedObjectContext = CoreDataUtility.shared.managedObjectContext
         let fetchRequest : NSFetchRequest<Users> = Users.fetchRequest()
         fetchRequest.predicate = NSPredicate(format: "emailID=%@", email)
         do {
@@ -78,7 +80,6 @@ class LoginService: NSObject {
     }
     
     func addAccount(signupInput: SignupInputModel, completionHandler: @escaping ((Bool) -> Void)) {
-        let managedObjectContext = CoreDataUtility.shared.managedObjectContext
         let entity = NSEntityDescription.entity(forEntityName: "Users", in: managedObjectContext)!
         let recentSearch = NSManagedObject(entity: entity, insertInto: managedObjectContext)
         recentSearch.setValue(signupInput.firstName!, forKey: UserKeys.firstName.rawValue)

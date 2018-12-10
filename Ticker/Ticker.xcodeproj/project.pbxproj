@@ -32,6 +32,8 @@
 		5B3E08CF21BEC69D00D48903 /* ValidationUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */; };
 		5B3E08D121BECD1300D48903 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */; };
 		5B3E08D321BEE6DA00D48903 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */; };
+		5B3E08D621BEF49300D48903 /* MockCoreDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */; };
+		5B3E08DA21BEF4EF00D48903 /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */; };
 		6CFF378FDE5A77ACB77AAD7C /* Pods_Ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */; };
 		82F3DAA40EEB5BCF31EF9662 /* Pods_TickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3604EF0362BBCDB05A1059 /* Pods_TickerTests.framework */; };
 /* End PBXBuildFile section */
@@ -89,6 +91,8 @@
 		5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtilityTests.swift; sourceTree = "<group>"; };
 		5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
 		5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
+		5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataUtility.swift; sourceTree = "<group>"; };
+		5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
 		868C8436395D88566E8F1BDF /* Pods_TickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A5F51E838E564A79700846 /* Pods-TickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickerTests/Pods-TickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -175,6 +179,7 @@
 		5B3E088721BB23D500D48903 /* TickerTests */ = {
 			isa = PBXGroup;
 			children = (
+				5B3E08D421BEF46800D48903 /* MockUtilities */,
 				5B3E08CD21BEC65100D48903 /* TickerTests */,
 				5B3E08CC21BEC64800D48903 /* LoginTests */,
 				5B3E088A21BB23D500D48903 /* Info.plist */,
@@ -315,6 +320,7 @@
 				5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */,
 				5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */,
 				5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */,
+				5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -325,6 +331,14 @@
 				5B3E088821BB23D500D48903 /* TickerViewModelTests.swift */,
 			);
 			path = TickerTests;
+			sourceTree = "<group>";
+		};
+		5B3E08D421BEF46800D48903 /* MockUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */,
+			);
+			path = MockUtilities;
 			sourceTree = "<group>";
 		};
 		BA97C5869D3556E83101E971 /* Frameworks */ = {
@@ -573,7 +587,9 @@
 				5B3E08D321BEE6DA00D48903 /* LoginViewModelTests.swift in Sources */,
 				5B3E088921BB23D500D48903 /* TickerViewModelTests.swift in Sources */,
 				5B3E08CF21BEC69D00D48903 /* ValidationUtilityTests.swift in Sources */,
+				5B3E08DA21BEF4EF00D48903 /* LoginServiceTests.swift in Sources */,
 				5B3E08D121BECD1300D48903 /* SignupViewModelTests.swift in Sources */,
+				5B3E08D621BEF49300D48903 /* MockCoreDataUtility.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
