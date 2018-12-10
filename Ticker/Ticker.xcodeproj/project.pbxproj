@@ -168,6 +168,7 @@
 		5B3E086F21BB23D000D48903 /* Ticker */ = {
 			isa = PBXGroup;
 			children = (
+				5B3E08DE21BF03AE00D48903 /* Storyboard */,
 				5B3E08A121BB240200D48903 /* Login */,
 				5B3E08AA21BB81BB00D48903 /* Ticker */,
 				5B3E087F21BB23D400D48903 /* Info.plist */,
@@ -239,7 +240,6 @@
 		5B3E08A521BB780F00D48903 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B3E087421BB23D000D48903 /* Main.storyboard */,
 				5B3E087221BB23D000D48903 /* LoginViewController.swift */,
 				5B3E08A821BB786400D48903 /* SignupViewController.swift */,
 			);
@@ -350,6 +350,14 @@
 				2B19768A21BE66D9004E9AE6 /* CoreDataUtility.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		5B3E08DE21BF03AE00D48903 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				5B3E087421BB23D000D48903 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		BA97C5869D3556E83101E971 /* Frameworks */ = {

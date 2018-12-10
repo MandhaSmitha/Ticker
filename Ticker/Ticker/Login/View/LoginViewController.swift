@@ -21,6 +21,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {
+        view.endEditing(true)
         errorLabel.text = nil
         viewModel?.login(email: emailTextField.text, password: passwordTextField.text, completionHandler: {
             (isSuccess, errorMessage) in
@@ -45,5 +46,16 @@ class LoginViewController: UIViewController {
         }
         tickerViewController.viewModel = TickerViewModel(service: BitPoloniexService())
         self.navigationController?.show(tickerViewController, sender: nil)
+    }
+}
+
+extension LoginViewController: UITextFieldDelegate {    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }

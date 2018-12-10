@@ -58,7 +58,6 @@ class BitPoloniexService: NSObject {
 
 extension BitPoloniexService: WebSocketDelegate {
     func websocketDidConnect(socket: WebSocket) {
-        print("websocketDidConnect")
         isConnected = true
         heartbeat = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
             self?.getHearbeat()
@@ -66,13 +65,11 @@ extension BitPoloniexService: WebSocketDelegate {
     }
     
     func websocketDidDisconnect(socket: WebSocket, error: NSError?) {
-        print("websocketDidDisconnect", error ?? "")
         isConnected = false
         heartbeat?.invalidate()
     }
     
     func websocketDidReceiveMessage(socket: WebSocket, text: String) {
-        print("websocketDidReceiveMessage", text)
         let decoder = JSONDecoder()
         do {
             let tickerModel: TickerModel = try decoder.decode(TickerModel.self, from: text.data(using: .utf8)!)
@@ -86,7 +83,6 @@ extension BitPoloniexService: WebSocketDelegate {
     }
     
     func websocketDidReceiveData(socket: WebSocket, data: Data) {
-        print("websocketDidReceiveData", data)
         let decoder = JSONDecoder()
         do {
             let tickerModel: TickerModel = try decoder.decode(TickerModel.self, from: data)

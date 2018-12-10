@@ -78,4 +78,56 @@ class LoginServiceTests: XCTestCase {
                                                                 XCTAssertTrue(isSuccess)
         }
     }
+    
+    func testSignupValidInput() {
+        loginService.signup(signupInput: SignupInputModel(firstName: "Smitha", lastName: "Reddy", emailID: "dummy@gmail.com", password: "Pass1234!")) {
+            (isSuccess, errorMessage) in
+            XCTAssertTrue(isSuccess)
+            XCTAssertNil(errorMessage)
+        }
+    }
+    
+    func testSignupInvalidInput() {
+        loginService.signup(signupInput: SignupInputModel(firstName: "Smitha", lastName: "Reddy", emailID: "dummy@gmail", password: "Pass1234!")) {
+            (isSuccess, errorMessage) in
+            XCTAssertFalse(isSuccess)
+            XCTAssert(errorMessage == "Some of the details provided seem to be empty or of an invalid format. Please check the details and try again.")
+        }
+    }
+    
+    func testSignupDuplicateAccount() {
+        loginService.signup(signupInput: SignupInputModel(firstName: "Smitha", lastName: "Reddy", emailID: "dummy@gmail.com", password: "Pass1234!")) {_,_ in
+        }
+        loginService.signup(signupInput: SignupInputModel(firstName: "Smitha", lastName: "Reddy", emailID: "dummy@gmail.com", password: "Pass1234!")) {
+            (isSuccess, errorMessage) in
+            XCTAssertFalse(isSuccess)
+            XCTAssert(errorMessage == "The email entered is already registered with us. Please login.")
+        }
+    }
+    
+    func testLoginAccountNotFound() {
+        loginService.login(email: "dummy@gmail.com", password: "Pass1234!") {
+            (isSuccess, errorMessage) in
+            XCTAssertFalse(isSuccess)
+            XCTAssert(errorMessage == "Sorry, we cannot see your account registered with us. Please signup with us.")
+        }
+    }
+    
+    func testLoginInvalidInput() {
+        loginService.login(email: "dummy", password: "Pass1234") {
+            (isSuccess, errorMessage) in
+            XCTAssertFalse(isSuccess)
+            XCTAssert(errorMessage == "Some of the details provided seem to be empty or of an invalid format. Please check the details and try again.")
+        }
+    }
+    
+    func testLogin() {
+        loginService.signup(signupInput: SignupInputModel(firstName: "Smitha", lastName: "Reddy", emailID: "dummy@gmail.com", password: "Pass1234!")) {_,_ in
+        }
+        loginService.login(email: "dummy@gmail.com", password: "Pass1234!") {
+            (isSuccess, errorMessage) in
+            XCTAssertTrue(isSuccess)
+            XCTAssertNil(errorMessage)
+        }
+    }
 }

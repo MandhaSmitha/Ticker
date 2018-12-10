@@ -53,11 +53,13 @@ class TickerViewController: UIViewController {
     func updateTicker() {
         switch currentTickerViewType {
         case .defaultTicker:
+            view.backgroundColor = UIColor.white
             defaultTickerView.isHidden = false
             customTickerView.isHidden = true
             defaultTickerLabel.text = tradePrice
             defaultTickerImageView.image = isChangePositive == true ? UIImage(named: "UpArrow") : UIImage(named: "DownArrow")
         case .customTicker:
+            view.backgroundColor = UIColor.black
             defaultTickerView.isHidden = true
             customTickerView.isHidden = false
             customTickerLabel.text = tradePrice

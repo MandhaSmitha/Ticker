@@ -27,7 +27,7 @@
 "Y9P-SN-WIf.text" = "Label";
 
 /* Class = "UILabel"; text = "*Password should be alphanumeric with a minimum lengh of 8. Should contain atleast a number and a special character."; ObjectID = "aql-rv-H5z"; */
-"aql-rv-H5z.text" = "*Password should be alphanumeric with a minimum lengh of 8. Should contain atleast a number and a special character.";
+"aql-rv-H5z.text" = "*Password should be alphanumeric with a lengh of 8 to 15. Should contain atleast one special character.";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "dRD-eG-WJn"; */
 "dRD-eG-WJn.text" = "Label";

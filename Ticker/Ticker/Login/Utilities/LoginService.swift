@@ -41,12 +41,16 @@ class LoginService: NSObject {
     }
     
     func login(email: String, password: String, completionHandler: @escaping ((Bool, String?) -> Void)) {
-        let userList = getUserList(email: email)
-        if let user = userList?.first,
-            let storedPassword = user.password as? String {
-            storedPassword == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
+        if ValidationUtility.isValidEmail(email) && ValidationUtility.isValidPassword(password) {
+            let userList = getUserList(email: email)
+            if let user = userList?.first,
+                let storedPassword = user.password as? String {
+                storedPassword == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
+            } else {
+                completionHandler(false, LoginErrorMapper.accountNotFound.rawValue)
+            }
         } else {
-            completionHandler(false, LoginErrorMapper.accountNotFound.rawValue)
+            completionHandler(false, LoginErrorMapper.invalidInput.rawValue)
         }
     }
     

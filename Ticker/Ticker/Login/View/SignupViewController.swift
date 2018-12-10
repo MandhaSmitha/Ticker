@@ -27,6 +27,7 @@ class SignupViewController: UIViewController {
     }
     
     @IBAction func didTapSignup(_ sender: UIButton) {
+        view.endEditing(true)
         errorLabel.text = nil
         let signupInput = SignupInputModel(firstName: firstNameTextField.text,
                                            lastName: lastNameTextField.text,
@@ -55,5 +56,16 @@ class SignupViewController: UIViewController {
         }
         tickerViewController.viewModel = TickerViewModel(service: BitPoloniexService())
         self.navigationController?.show(tickerViewController, sender: nil)
+    }
+}
+
+extension SignupViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
