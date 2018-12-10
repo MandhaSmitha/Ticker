@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  Ticker
+
+  Created by Mandha Smitha S on 12/9/18.
+  Copyright © 2018 Smitha. All rights reserved.
+*/
+
+"ValidationError_Message" = "Please enter valid {inputValues}.";
+"Firstname" = "First name";
+"Lastname" = "Last name";
+"EmailId" = "Email address";
+"Password" = "Password";
+"Signup_Failed_Message" = "Sorry, Signup failed. Please try again later.";
+"Login_AccountNotFound" = "Sorry, we cannot see your account registered with us. Please signup with us.";
+"Login_InvalidCredentials" = "Login failed! Email or password invalid. Please check the credentials and try again.";
+"Signup_AccountAlreadyExists" = "The email entered is already registered with us. Please login.";
+"Signup_InvalidUserInput" = "Some of the details provided seem to be empty or of an invalid format. Please check the details and try again.";
+"Signup_FailedToAddAccount" = "Sorry, something went wrong. Please try again.";

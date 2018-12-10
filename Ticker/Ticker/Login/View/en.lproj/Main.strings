@@ -1,0 +1,51 @@
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "33g-wt-vey"; */
+"33g-wt-vey.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "Already a member? Login"; ObjectID = "3Mo-Jt-URu"; */
+"3Mo-Jt-URu.normalTitle" = "Already a member? Login";
+
+/* Class = "UIButton"; normalTitle = "Sign up"; ObjectID = "9q7-IN-ej3"; */
+"9q7-IN-ej3.normalTitle" = "Sign up";
+
+/* Class = "UITextField"; placeholder = "Email address"; ObjectID = "Afd-kM-uwl"; */
+"Afd-kM-uwl.placeholder" = "Email address";
+
+/* Class = "UITextField"; placeholder = "Password"; ObjectID = "CXV-te-aM2"; */
+"CXV-te-aM2.placeholder" = "Password";
+
+/* Class = "UIButton"; normalTitle = "New User? Register"; ObjectID = "DbZ-9n-3rI"; */
+"DbZ-9n-3rI.normalTitle" = "New User? Register";
+
+/* Class = "UITextField"; placeholder = "Last name"; ObjectID = "KUg-7S-bQj"; */
+"KUg-7S-bQj.placeholder" = "Last name";
+
+/* Class = "UILabel"; text = "Ticker"; ObjectID = "MqE-td-vhE"; */
+"MqE-td-vhE.text" = "Ticker";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "Y9P-SN-WIf"; */
+"Y9P-SN-WIf.text" = "Label";
+
+/* Class = "UILabel"; text = "*Password should be alphanumeric with a minimum lengh of 8. Should contain atleast a number and a special character."; ObjectID = "aql-rv-H5z"; */
+"aql-rv-H5z.text" = "*Password should be alphanumeric with a minimum lengh of 8. Should contain atleast a number and a special character.";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "dRD-eG-WJn"; */
+"dRD-eG-WJn.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "First name"; ObjectID = "iej-TM-aNH"; */
+"iej-TM-aNH.placeholder" = "First name";
+
+/* Class = "UIButton"; normalTitle = "Login"; ObjectID = "nH8-XR-3ss"; */
+"nH8-XR-3ss.normalTitle" = "Login";
+
+/* Class = "UISegmentedControl"; uqO-2P-27x.segmentTitles[0] = "Default"; ObjectID = "uqO-2P-27x"; */
+"uqO-2P-27x.segmentTitles[0]" = "Default";
+
+/* Class = "UISegmentedControl"; uqO-2P-27x.segmentTitles[1] = "Custom"; ObjectID = "uqO-2P-27x"; */
+"uqO-2P-27x.segmentTitles[1]" = "Custom";
+
+/* Class = "UILabel"; text = "Ticker"; ObjectID = "waU-rO-rbc"; */
+"waU-rO-rbc.text" = "Ticker";
+
+/* Class = "UITextField"; placeholder = "Email address"; ObjectID = "zGp-1u-Lt2"; */
+"zGp-1u-Lt2.placeholder" = "Email address";
