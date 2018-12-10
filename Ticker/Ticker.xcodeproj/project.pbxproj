@@ -18,7 +18,7 @@
 		5B3E087621BB23D000D48903 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E087421BB23D000D48903 /* Main.storyboard */; };
 		5B3E087921BB23D000D48903 /* Ticker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E087721BB23D000D48903 /* Ticker.xcdatamodeld */; };
 		5B3E087E21BB23D400D48903 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5B3E087C21BB23D400D48903 /* LaunchScreen.storyboard */; };
-		5B3E088921BB23D500D48903 /* TickerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E088821BB23D500D48903 /* TickerTests.swift */; };
+		5B3E088921BB23D500D48903 /* TickerViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E088821BB23D500D48903 /* TickerViewModelTests.swift */; };
 		5B3E089421BB23D500D48903 /* TickerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E089321BB23D500D48903 /* TickerUITests.swift */; };
 		5B3E08A921BB786400D48903 /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08A821BB786400D48903 /* SignupViewController.swift */; };
 		5B3E08AD21BB824A00D48903 /* TickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08AC21BB824A00D48903 /* TickerViewController.swift */; };
@@ -31,6 +31,7 @@
 		5B3E08CB21BD706200D48903 /* ValidationUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08CA21BD706200D48903 /* ValidationUtility.swift */; };
 		5B3E08CF21BEC69D00D48903 /* ValidationUtilityTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */; };
 		5B3E08D121BECD1300D48903 /* SignupViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */; };
+		5B3E08D321BEE6DA00D48903 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */; };
 		6CFF378FDE5A77ACB77AAD7C /* Pods_Ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */; };
 		82F3DAA40EEB5BCF31EF9662 /* Pods_TickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3604EF0362BBCDB05A1059 /* Pods_TickerTests.framework */; };
 /* End PBXBuildFile section */
@@ -70,7 +71,7 @@
 		5B3E087D21BB23D400D48903 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5B3E087F21BB23D400D48903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3E088421BB23D500D48903 /* TickerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		5B3E088821BB23D500D48903 /* TickerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerTests.swift; sourceTree = "<group>"; };
+		5B3E088821BB23D500D48903 /* TickerViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerViewModelTests.swift; sourceTree = "<group>"; };
 		5B3E088A21BB23D500D48903 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5B3E088F21BB23D500D48903 /* TickerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TickerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B3E089321BB23D500D48903 /* TickerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickerUITests.swift; sourceTree = "<group>"; };
@@ -87,6 +88,7 @@
 		5B3E08CA21BD706200D48903 /* ValidationUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtility.swift; sourceTree = "<group>"; };
 		5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationUtilityTests.swift; sourceTree = "<group>"; };
 		5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewModelTests.swift; sourceTree = "<group>"; };
+		5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		868C8436395D88566E8F1BDF /* Pods_TickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A5F51E838E564A79700846 /* Pods-TickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickerTests/Pods-TickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -312,6 +314,7 @@
 			children = (
 				5B3E08CE21BEC69D00D48903 /* ValidationUtilityTests.swift */,
 				5B3E08D021BECD1300D48903 /* SignupViewModelTests.swift */,
+				5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */,
 			);
 			path = LoginTests;
 			sourceTree = "<group>";
@@ -319,7 +322,7 @@
 		5B3E08CD21BEC65100D48903 /* TickerTests */ = {
 			isa = PBXGroup;
 			children = (
-				5B3E088821BB23D500D48903 /* TickerTests.swift */,
+				5B3E088821BB23D500D48903 /* TickerViewModelTests.swift */,
 			);
 			path = TickerTests;
 			sourceTree = "<group>";
@@ -567,7 +570,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B3E088921BB23D500D48903 /* TickerTests.swift in Sources */,
+				5B3E08D321BEE6DA00D48903 /* LoginViewModelTests.swift in Sources */,
+				5B3E088921BB23D500D48903 /* TickerViewModelTests.swift in Sources */,
 				5B3E08CF21BEC69D00D48903 /* ValidationUtilityTests.swift in Sources */,
 				5B3E08D121BECD1300D48903 /* SignupViewModelTests.swift in Sources */,
 			);
