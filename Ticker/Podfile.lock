@@ -1,16 +1,20 @@
 PODS:
+  - RNCryptor (5.0.3)
   - Starscream (2.1.1)
 
 DEPENDENCIES:
+  - RNCryptor
   - Starscream
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
+    - RNCryptor
     - Starscream
 
 SPEC CHECKSUMS:
+  RNCryptor: c93d19029dcf7ff160aca0f24d6c9e7b0d82f664
   Starscream: 142bd8ef24592d985daee9fa48c936070b85b15f
 
-PODFILE CHECKSUM: 46bfcae4a02c161f3150c38e5d8c6defa2a30b2f
+PODFILE CHECKSUM: 146c1854070757ecc4fbf28bd27b893cd9ce5d7c
 
 COCOAPODS: 1.5.3

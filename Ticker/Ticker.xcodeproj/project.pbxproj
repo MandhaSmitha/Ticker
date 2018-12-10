@@ -34,6 +34,7 @@
 		5B3E08D321BEE6DA00D48903 /* LoginViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */; };
 		5B3E08D621BEF49300D48903 /* MockCoreDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */; };
 		5B3E08DA21BEF4EF00D48903 /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */; };
+		5B3E08DC21BEFDAA00D48903 /* EncryptedStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08DB21BEFDAA00D48903 /* EncryptedStringTransformer.swift */; };
 		6CFF378FDE5A77ACB77AAD7C /* Pods_Ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */; };
 		82F3DAA40EEB5BCF31EF9662 /* Pods_TickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3604EF0362BBCDB05A1059 /* Pods_TickerTests.framework */; };
 /* End PBXBuildFile section */
@@ -93,6 +94,7 @@
 		5B3E08D221BEE6DA00D48903 /* LoginViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModelTests.swift; sourceTree = "<group>"; };
 		5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataUtility.swift; sourceTree = "<group>"; };
 		5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
+		5B3E08DB21BEFDAA00D48903 /* EncryptedStringTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedStringTransformer.swift; sourceTree = "<group>"; };
 		868C8436395D88566E8F1BDF /* Pods_TickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A5F51E838E564A79700846 /* Pods-TickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickerTests/Pods-TickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -219,8 +221,8 @@
 		5B3E08A321BB242B00D48903 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
+				5B3E08DD21BEFDB000D48903 /* Utilities */,
 				5B3E087721BB23D000D48903 /* Ticker.xcdatamodeld */,
-				2B19768A21BE66D9004E9AE6 /* CoreDataUtility.swift */,
 			);
 			path = CoreData;
 			sourceTree = "<group>";
@@ -339,6 +341,15 @@
 				5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */,
 			);
 			path = MockUtilities;
+			sourceTree = "<group>";
+		};
+		5B3E08DD21BEFDB000D48903 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				5B3E08DB21BEFDAA00D48903 /* EncryptedStringTransformer.swift */,
+				2B19768A21BE66D9004E9AE6 /* CoreDataUtility.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		BA97C5869D3556E83101E971 /* Frameworks */ = {
@@ -508,10 +519,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
 				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -568,6 +581,7 @@
 				5B3E08B721BC004C00D48903 /* TickerViewModel.swift in Sources */,
 				5B3E08B921BC179900D48903 /* TickerModels.swift in Sources */,
 				5B3E08AD21BB824A00D48903 /* TickerViewController.swift in Sources */,
+				5B3E08DC21BEFDAA00D48903 /* EncryptedStringTransformer.swift in Sources */,
 				5B3E087921BB23D000D48903 /* Ticker.xcdatamodeld in Sources */,
 				5B3E08CB21BD706200D48903 /* ValidationUtility.swift in Sources */,
 				2B19768721BE4506004E9AE6 /* LoginViewModel.swift in Sources */,

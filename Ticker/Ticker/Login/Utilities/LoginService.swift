@@ -42,8 +42,9 @@ class LoginService: NSObject {
     
     func login(email: String, password: String, completionHandler: @escaping ((Bool, String?) -> Void)) {
         let userList = getUserList(email: email)
-        if let user = userList?.first {
-            user.password == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
+        if let user = userList?.first,
+            let storedPassword = user.password as? String {
+            storedPassword == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
         } else {
             completionHandler(false, LoginErrorMapper.accountNotFound.rawValue)
         }
