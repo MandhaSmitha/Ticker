@@ -17,3 +17,4 @@
 "Signup_AccountAlreadyExists" = "The email entered is already registered with us. Please login.";
 "Signup_InvalidUserInput" = "Some of the details provided seem to be empty or of an invalid format. Please check the details and try again.";
 "Signup_FailedToAddAccount" = "Sorry, something went wrong. Please try again.";
+"Login_GenericError" = "Sorry, something went wrong. Please try again.";

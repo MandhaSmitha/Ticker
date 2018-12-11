@@ -43,9 +43,12 @@ class LoginService: NSObject {
     func login(email: String, password: String, completionHandler: @escaping ((Bool, String?) -> Void)) {
         if ValidationUtility.isValidEmail(email) && ValidationUtility.isValidPassword(password) {
             let userList = getUserList(email: email)
-            if let user = userList?.first,
-                let storedPassword = user.password as? String {
-                storedPassword == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
+            if let user = userList?.first {
+                if let storedPassword = user.password as? String {
+                    storedPassword == password ? completionHandler(true, nil) : completionHandler(false, LoginErrorMapper.invalidCredentials.rawValue)
+                } else {
+                    completionHandler(false, LoginErrorMapper.passwordDecryptionFailed.rawValue)
+                }
             } else {
                 completionHandler(false, LoginErrorMapper.accountNotFound.rawValue)
             }
@@ -91,8 +94,11 @@ class LoginService: NSObject {
         recentSearch.setValue(signupInput.lastName!, forKey: UserKeys.lastName.rawValue)
         recentSearch.setValue(signupInput.emailID!, forKey: UserKeys.emailID.rawValue)
         recentSearch.setValue(signupInput.password!, forKey: UserKeys.password.rawValue)
-        CoreDataUtility.shared.saveContext { (isSuccess) in
-            completionHandler(isSuccess)
+        do {
+            try managedObjectContext.save()
+            completionHandler(true)
+        } catch {
+            completionHandler(false)
         }
     }
 }

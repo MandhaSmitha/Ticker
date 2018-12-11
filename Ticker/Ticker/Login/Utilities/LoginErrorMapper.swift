@@ -14,6 +14,7 @@ enum LoginErrorMapper: String, RawRepresentable {
     case accountAlreadyExists
     case invalidInput
     case failedToAddAccount
+    case passwordDecryptionFailed
     
     typealias RawValue = String
     var rawValue: RawValue {
@@ -28,6 +29,8 @@ enum LoginErrorMapper: String, RawRepresentable {
             return NSLocalizedString("Signup_InvalidUserInput", comment: "Invalid user input for registration")
         case .failedToAddAccount:
             return NSLocalizedString("Signup_FailedToAddAccount", comment: "Failed to create account")
+        case .passwordDecryptionFailed:
+            return NSLocalizedString("Login_GenericError", comment: "Generic failure error")
         }
     }
 }

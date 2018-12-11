@@ -48,7 +48,7 @@ class BitPoloniexService: NSObject {
         socket?.connect()
     }
     
-    private func getHearbeat() {
+    @objc private func getHearbeat() {
         guard let channel = symbol else {
             return
         }
@@ -59,8 +59,16 @@ class BitPoloniexService: NSObject {
 extension BitPoloniexService: WebSocketDelegate {
     func websocketDidConnect(socket: WebSocket) {
         isConnected = true
-        heartbeat = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
-            self?.getHearbeat()
+        if #available(iOS 10.0, *) {
+            heartbeat = Timer.scheduledTimer(withTimeInterval: 5.0, repeats: true) { [weak self] _ in
+                self?.getHearbeat()
+            }
+        } else {
+            heartbeat = Timer.scheduledTimer(timeInterval: 1,
+                                             target: self,
+                                             selector: #selector(self.getHearbeat),
+                                             userInfo: nil,
+                                             repeats: true)
         }
     }
     
