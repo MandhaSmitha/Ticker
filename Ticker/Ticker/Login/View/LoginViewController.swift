@@ -7,17 +7,27 @@
 //
 
 import UIKit
+import Lottie
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet var errorLabel: UILabel!
+    @IBOutlet weak var lottieView: AnimationView!
     lazy var viewModel: LoginViewModel? = {
         return LoginViewModel()
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateIcon()
+    }
+    
+    func animateIcon() {
+        let starAnimation = Animation.named("coin")
+        lottieView.animation = starAnimation
+        lottieView.loopMode = .loop
+        lottieView.play()
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {

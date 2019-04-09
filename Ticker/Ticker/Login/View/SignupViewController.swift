@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 class SignupViewController: UIViewController {
     lazy var viewModel: SignupViewModel? = {
@@ -17,9 +18,18 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailIdTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var lottieView: AnimationView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        animateIcon()
+    }
+    
+    func animateIcon() {
+        let starAnimation = Animation.named("coin")
+        lottieView.animation = starAnimation
+        lottieView.loopMode = .loop
+        lottieView.play()
     }
     
     @IBAction func didTapLogin(_ sender: UIButton) {

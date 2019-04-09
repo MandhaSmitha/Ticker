@@ -14,7 +14,6 @@ enum TickerViewType {
 }
 
 class TickerViewController: UIViewController {
-    @IBOutlet weak var tickerSegmentedControl: UISegmentedControl!
     @IBOutlet weak var defaultTickerView: UIView!
     @IBOutlet weak var defaultTickerLabel: UILabel!
     @IBOutlet weak var defaultTickerImageView: UIImageView!
@@ -41,25 +40,29 @@ class TickerViewController: UIViewController {
             self?.updateTickerData(tradePrice: tradePrice, isPositive: isPositive)
         }
     }
-    @IBAction func didSelectSegment(_ sender: UISegmentedControl) {
-        currentTickerViewType = sender.selectedSegmentIndex == 0 ? .defaultTicker : .customTicker
+    
+    @IBAction func didTapSwitch(_ sender: UIButton) {
+        currentTickerViewType = currentTickerViewType == .defaultTicker ? .customTicker : .defaultTicker
         updateTicker()
+    }
+    
+    @IBAction func didTapLogout(_ sender: UIButton) {
+        self.navigationController?.popToRootViewController(animated: true)
     }
     
     func updateTickerData(tradePrice price: String, isPositive: Bool) {
         tradePrice = price
         isChangePositive = isPositive
     }
+    
     func updateTicker() {
         switch currentTickerViewType {
         case .defaultTicker:
-            view.backgroundColor = UIColor.white
             defaultTickerView.isHidden = false
             customTickerView.isHidden = true
             defaultTickerLabel.text = tradePrice
             defaultTickerImageView.image = isChangePositive == true ? UIImage(named: "UpArrow") : UIImage(named: "DownArrow")
         case .customTicker:
-            view.backgroundColor = UIColor.black
             defaultTickerView.isHidden = true
             customTickerView.isHidden = false
             customTickerLabel.text = tradePrice

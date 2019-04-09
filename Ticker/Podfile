@@ -6,6 +6,7 @@ target 'Ticker' do
   use_frameworks!
   pod 'Starscream'
   pod 'RNCryptor'
+  pod 'lottie-ios'
 
   target 'TickerTests' do
     inherit! :search_paths

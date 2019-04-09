@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -35,6 +35,9 @@
 		5B3E08D621BEF49300D48903 /* MockCoreDataUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */; };
 		5B3E08DA21BEF4EF00D48903 /* LoginServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */; };
 		5B3E08DC21BEFDAA00D48903 /* EncryptedStringTransformer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B3E08DB21BEFDAA00D48903 /* EncryptedStringTransformer.swift */; };
+		5B6FDFA7225BA974000B1880 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FDFA6225BA974000B1880 /* CustomTextField.swift */; };
+		5B6FDFA9225BAA96000B1880 /* GradientButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6FDFA8225BAA96000B1880 /* GradientButton.swift */; };
+		5B6FDFAC225C42A8000B1880 /* coin.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B6FDFAB225C42A8000B1880 /* coin.json */; };
 		6CFF378FDE5A77ACB77AAD7C /* Pods_Ticker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */; };
 		82F3DAA40EEB5BCF31EF9662 /* Pods_TickerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C3604EF0362BBCDB05A1059 /* Pods_TickerTests.framework */; };
 /* End PBXBuildFile section */
@@ -95,6 +98,9 @@
 		5B3E08D521BEF49300D48903 /* MockCoreDataUtility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockCoreDataUtility.swift; sourceTree = "<group>"; };
 		5B3E08D921BEF4EF00D48903 /* LoginServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginServiceTests.swift; sourceTree = "<group>"; };
 		5B3E08DB21BEFDAA00D48903 /* EncryptedStringTransformer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedStringTransformer.swift; sourceTree = "<group>"; };
+		5B6FDFA6225BA974000B1880 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		5B6FDFA8225BAA96000B1880 /* GradientButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientButton.swift; sourceTree = "<group>"; };
+		5B6FDFAB225C42A8000B1880 /* coin.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = coin.json; sourceTree = "<group>"; };
 		868C8436395D88566E8F1BDF /* Pods_TickerUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TickerUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		89A5F51E838E564A79700846 /* Pods-TickerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TickerTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TickerTests/Pods-TickerTests.debug.xcconfig"; sourceTree = "<group>"; };
 		8AAA1950652A1B5AA769908F /* Pods_Ticker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Ticker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -168,6 +174,9 @@
 		5B3E086F21BB23D000D48903 /* Ticker */ = {
 			isa = PBXGroup;
 			children = (
+				5B6FDFAB225C42A8000B1880 /* coin.json */,
+				5B6FDFAA225C427E000B1880 /* Lottie */,
+				5B6FDFA4225BA952000B1880 /* Common */,
 				5B3E08DE21BF03AE00D48903 /* Storyboard */,
 				5B3E08A121BB240200D48903 /* Login */,
 				5B3E08AA21BB81BB00D48903 /* Ticker */,
@@ -360,6 +369,30 @@
 			path = Storyboard;
 			sourceTree = "<group>";
 		};
+		5B6FDFA4225BA952000B1880 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				5B6FDFA5225BA960000B1880 /* Views */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		5B6FDFA5225BA960000B1880 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5B6FDFA6225BA974000B1880 /* CustomTextField.swift */,
+				5B6FDFA8225BAA96000B1880 /* GradientButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5B6FDFAA225C427E000B1880 /* Lottie */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lottie;
+			sourceTree = "<group>";
+		};
 		BA97C5869D3556E83101E971 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -479,6 +512,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5B3E087E21BB23D400D48903 /* LaunchScreen.storyboard in Resources */,
+				5B6FDFAC225C42A8000B1880 /* coin.json in Resources */,
 				5B3E08C621BD6BC500D48903 /* Localizable.strings in Resources */,
 				2B19768921BE4CDA004E9AE6 /* Assets.xcassets in Resources */,
 				5B3E087621BB23D000D48903 /* Main.storyboard in Resources */,
@@ -525,19 +559,16 @@
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/RNCryptor/RNCryptor.framework",
-				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RNCryptor.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Ticker/Pods-Ticker-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		92E58F0C65DD00B75475FC7E /* [CP] Check Pods Manifest.lock */ = {
@@ -591,10 +622,12 @@
 				5B3E08AD21BB824A00D48903 /* TickerViewController.swift in Sources */,
 				5B3E08DC21BEFDAA00D48903 /* EncryptedStringTransformer.swift in Sources */,
 				5B3E087921BB23D000D48903 /* Ticker.xcdatamodeld in Sources */,
+				5B6FDFA7225BA974000B1880 /* CustomTextField.swift in Sources */,
 				5B3E08CB21BD706200D48903 /* ValidationUtility.swift in Sources */,
 				2B19768721BE4506004E9AE6 /* LoginViewModel.swift in Sources */,
 				5B3E08A921BB786400D48903 /* SignupViewController.swift in Sources */,
 				5B3E08BC21BCB3CE00D48903 /* BitPoloniexService.swift in Sources */,
+				5B6FDFA9225BAA96000B1880 /* GradientButton.swift in Sources */,
 				2B19768B21BE66D9004E9AE6 /* CoreDataUtility.swift in Sources */,
 				2B19768D21BE7DDC004E9AE6 /* LoginService.swift in Sources */,
 				2B19768F21BE8A23004E9AE6 /* LoginErrorMapper.swift in Sources */,
