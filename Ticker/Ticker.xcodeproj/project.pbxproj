@@ -174,7 +174,6 @@
 		5B3E086F21BB23D000D48903 /* Ticker */ = {
 			isa = PBXGroup;
 			children = (
-				5B6FDFAB225C42A8000B1880 /* coin.json */,
 				5B6FDFAA225C427E000B1880 /* Lottie */,
 				5B6FDFA4225BA952000B1880 /* Common */,
 				5B3E08DE21BF03AE00D48903 /* Storyboard */,
@@ -389,6 +388,7 @@
 		5B6FDFAA225C427E000B1880 /* Lottie */ = {
 			isa = PBXGroup;
 			children = (
+				5B6FDFAB225C42A8000B1880 /* coin.json */,
 			);
 			path = Lottie;
 			sourceTree = "<group>";

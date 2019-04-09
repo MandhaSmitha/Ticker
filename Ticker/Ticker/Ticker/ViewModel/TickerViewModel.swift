@@ -13,6 +13,7 @@ class TickerViewModel: NSObject {
     var updateTickerData: ((String, Bool) -> Void)?
     var symbol: Int?
     var bitPloniexService: BitPoloniexService
+    var referencePrice: Double!
     
     init(service: BitPoloniexService) {
         self.bitPloniexService = service
@@ -24,16 +25,19 @@ class TickerViewModel: NSObject {
         bitPloniexService.delegate = self
         bitPloniexService.subscribe(toSymbol: id)
     }
+    
+    func setReferencePrice(_ price: Double) {
+        referencePrice = price
+    }
 }
 
 extension TickerViewModel: BitPoloniexServiceDelegate {
     func didReceiveTickerUpdate(tickerModel: TickerModel) {
         let tickerDetail = tickerModel.tickerDetail
         guard let tradePrice = tickerDetail?.tradePrice,
-            let percentageChange = tickerDetail?.percentageChange,
-            let percentageValue = Double(percentageChange) else {
+            let tradeValue = Double(tradePrice) else {
                 return
         }
-        updateTickerData?(tradePrice, percentageValue >= 0.0 ? true : false)
+        updateTickerData?(tradePrice, tradeValue >= referencePrice ? true : false)
     }
 }

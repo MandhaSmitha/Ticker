@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Lottie
 
 enum TickerViewType {
     case defaultTicker
@@ -20,6 +21,9 @@ class TickerViewController: UIViewController {
     @IBOutlet weak var customTickerView: UIView!
     @IBOutlet weak var customTickerLabel: UILabel!
     @IBOutlet weak var customTickerImageView: UIImageView!
+    @IBOutlet weak var stockPriceTextField: UITextField!
+    @IBOutlet weak var userInputView: UIView!
+    @IBOutlet weak var lottieView: AnimationView!
     var tradePrice: String? {
         didSet {
             updateTicker()
@@ -32,13 +36,30 @@ class TickerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setDataClosures()
-        viewModel?.getData(forSymbol: 1002)
+        animateIcon()
     }
     
+    func animateIcon() {
+        let starAnimation = Animation.named("coin")
+        lottieView.animation = starAnimation
+        lottieView.loopMode = .loop
+        lottieView.play()
+    }
     func setDataClosures() {
         viewModel?.updateTickerData = { [weak self] (tradePrice, isPositive) -> Void in
             self?.updateTickerData(tradePrice: tradePrice, isPositive: isPositive)
         }
+    }
+    
+    @IBAction func didTapCheckPrice(_ sender: UIButton) {
+        guard let price = stockPriceTextField.text,
+            let value = Double(price) else {
+            return
+        }
+        viewModel?.setReferencePrice(value)
+        viewModel?.getData(forSymbol: 1002)
+        lottieView.stop()
+        userInputView.isHidden = true
     }
     
     @IBAction func didTapSwitch(_ sender: UIButton) {
@@ -68,5 +89,16 @@ class TickerViewController: UIViewController {
             customTickerLabel.text = tradePrice
             customTickerImageView.image = isChangePositive == true ? UIImage(named: "UpArrow") : UIImage(named: "DownArrow")
         }
+    }
+}
+
+extension TickerViewController: UITextFieldDelegate {
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        textField.resignFirstResponder()
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
     }
 }
